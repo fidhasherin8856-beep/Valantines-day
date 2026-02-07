@@ -290,74 +290,38 @@ button:hover {
 
 <script>
 function openEnv() {
-  document.getElementById("env").classList.add("open");
+    const env = document.getElementById("env");
+    const heading = document.getElementById("valHeading");
+
+    env.classList.add("open");
+    heading.style.display = "block";
+
+    createHearts(40);
 }
 
 function closeEnv() {
-  document.getElementById("env").classList.remove("open");
+    const env = document.getElementById("env");
+    const heading = document.getElementById("valHeading");
+
+    env.classList.remove("open");
+    heading.style.display = "none";
 }
 
-function openEnv() {
-document.getElementById("env").classList.add("open");
+function createHearts(num) {
+    for (let i = 0; i < num; i++) {
+        let heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "❣️";
 
-// Show the heading at the top
-document.getElementById("valHeading").style.display = "block";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.fontSize = (20 + Math.random() * 30) + "px";
+        heart.style.animationDuration = (6 + Math.random() * 10) + "s";
+
+        document.getElementById("hearts-container").appendChild(heart);
+
+        heart.addEventListener("animationend", () => heart.remove());
+    }
 }
-
-function closeEnv() {
-document.getElementById("env").classList.remove("open");
-
-// Hide the heading when closed
-document.getElementById("valHeading").style.display = "none";
-}
-
-createHeart();
-
-  // Start heart animation
-  heartInterval = setInterval(createHeart, 10); 
-
-
-function openEnv() {
-  // Open the envelope
-  document.getElementById("env").classList.add("open");
-  
-  // Show the heading
-  document.getElementById("valHeading").style.display = "block";
-
-  // Create hearts when open button is clicked
-  createHearts(50); // number of hearts
-}
-
-function createHearts(numHearts) {
-  for (let i = 0; i < numHearts; i++) {
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    
-    // Use emoji instead of CSS shape
-    heart.innerHTML = "🎈🎈❣️" ; // <-- change this to any emoji you want
-    
-    // Random horizontal position
-    heart.style.left = Math.random() * window.innerWidth + "px";
-    
-    // Random size
-    const size = 20 + Math.random() * 30;
-    heart.style.fontSize = size + "px";
-    
-    // Random animation duration
-    heart.style.animationDuration = (7 + Math.random() * 15) + "s";
-    
-    // Random rotation
-    heart.style.transform = `rotate(${Math.random() * 360}deg)`;
-    
-    document.getElementById("hearts-container").appendChild(heart);
-    
-    // Remove heart after animation ends
-    heart.addEventListener("animationend", () => {
-      heart.remove();
-    });
-  }
-}
-
 </script>
 
 
