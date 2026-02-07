@@ -31,6 +31,8 @@ body{
   background: #f4c4c4; /* background behind triangles (optional) */
   border-radius: 6px;
   overflow: hidden;
+margin: 250px auto 0 auto; 
+z-index:5;
   margin-top: 250px;
 }
 
@@ -346,7 +348,7 @@ function createHearts(numHearts) {
     // Random rotation
     heart.style.transform = `rotate(${Math.random() * 360}deg)`;
     
-    document.body.appendChild(heart);
+    document.getElementById("hearts-container").appendChild(heart);
     
     // Remove heart after animation ends
     heart.addEventListener("animationend", () => {
