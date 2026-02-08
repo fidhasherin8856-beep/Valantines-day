@@ -49,10 +49,6 @@
         background: #ffe6f2;
     }
 
-    .input-field:focus{
-        border-color: #ff3399;
-    }
-
     .login-btn{
         width: 100%;
         padding: 12px;
@@ -80,13 +76,25 @@
     <h2>💖 Valentine Login 💖</h2>
     <p>Enter your names to unlock your special surprise ✨</p>
 
-    <input type="text" class="input-field" placeholder="Your Name (Link opener)">
-    <input type="text" class="input-field" placeholder="Lover's Name">
+    <input type="text" id="opener" class="input-field" placeholder="Your Name (Link opener)">
+    <input type="text" id="lover" class="input-field" placeholder="Lover's Name">
 
-<a href="cover.html">
-    <button class="login-btn">Login ❤️</button>
-</a>
+    <button class="login-btn" onclick="goNext()">Login ❤️</button>
 </div>
+
+<script>
+function goNext() {
+    let opener = document.getElementById("opener").value.trim();
+    let lover = document.getElementById("lover").value.trim();
+
+    if (opener === "" || lover === "") {
+        alert("Please fill in both names before continuing ❤️");
+        return;
+    }
+
+    window.location.href = "cover.html";
+}
+</script>
 
 </body>
 </html>
