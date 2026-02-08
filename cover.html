@@ -39,7 +39,7 @@ body{
   height:0;
   border-left: 140px solid transparent;
   border-right: 140px solid transparent;
-  border-top: 250px solid #d64f4f;
+  border-top: 150px solid #d64f4f;
   transform-origin: top;
   transition: 0.6s;
   z-index: 3;
@@ -54,7 +54,7 @@ body{
   height: 0;
   border-left: 140px solid transparent;
   border-right: 140px solid transparent;
-  border-bottom: 250px solid #ff6a5c;
+  border-bottom: 150px solid #ff6a5c;
   z-index: 2;
 }
 
@@ -86,22 +86,28 @@ body{
 
 /* Letter */
 .letter {
-  position: absolute;
-  width: 100%;
-  height: 200px;   /* same as envelope height */
-  top: 0;
-  left: 0;
-  background: white;
+ position: absolute;
+  width:100%;
+  height:100%;
+  top: 100px;
+  left: 1.5px;
+  bottom: 100px;
   border-radius: 4px;
+  padding: 60px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  transform: translateY(100%);
   transition: 0.7s ease;
-  z-index: 1;
-  overflow: hidden;   /* IMPORTANT */
+  z-index: 2;
+  color:rgb(104, 44, 118);
+  border-radius: 50px;
+  box-shadow: #151111;
 }
-
-.letter img {
+.letter img{
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* keeps full image INSIDE */
+  object-fit: cover;
   display: block;
 }
 
@@ -267,7 +273,7 @@ button:hover {
 function openEnv() {
     document.getElementById("env").classList.add("open");
     document.getElementById("valHeading").style.display = "block";
-    createHearts(30);
+    createHearts(80);
 }
 
 function closeEnv() {
@@ -282,9 +288,9 @@ function createHearts(num) {
         heart.innerHTML = "🎈❣️🎈";
         heart.style.left = Math.random() * 100 + "vw";
         heart.style.fontSize = (Math.random() * 20 + 10) + "px";
-        heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+        heart.style.animationDuration = (Math.random() * 7 + 4) + "s";
         document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 5000);
+        setTimeout(() => heart.remove(), 1000);
     }
 }
 </script>
