@@ -23,14 +23,13 @@ body{
 .envelope {  
   position: relative;  
   width: 280px;  
-  height: 300px;  
-  margin: 40px auto;  
+  height: 300px; 
+margin: 40px auto 0 auto;  
   background: #f4c4c4; /* background behind triangles (optional) */  
   border-radius: 6px;  
-  overflow: hidden;  
-margin: 250px auto 0 auto;   
+  overflow: hidden;    
 z-index:5;  
-  margin-top: 250px;  
+   
 }  
   
   
@@ -173,18 +172,17 @@ button:hover {
   color: white;          /* optional */  
 }  
   
-.head{  
-  text-align: center;  
-  font-size: 18px;  
-  margin-bottom: -265px;  
-  padding-top: 180px;  
-  padding-bottom: 25px;  
-  font-family:" poppins";  
-  font-style:italic;  
-  color: #92155c;  
+.head{
+  text-align: center;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family:"Poppins", sans-serif;
+  font-style: italic;
+  color: #92155c;
+}
   
   
-}  
   
 .arrow-right {  
   position: fixed;  
@@ -220,22 +218,20 @@ button:hover {
   text-align: center;  
   z-index: 999;  
 }  
-#valHeading {  
-  display: none;  
-  position: fixed; /* stays at top */  
-  top: 2px;       /* distance from top */  
-  left: 50%;  
-  transform: translateX(-50%);  
-  color: #d61c4e;  
-  font-size: 36px;  
-  font-style: italic;  
-  font-family: 'Poppins', sans-serif;  
-  z-index: 999;    /* above other content */  
-  text-align: center;  
-  background: rgba(146, 212, 162, 0.3); /* optional glow effect */  
-  padding: 10px 20px;  
-  border-radius: 12px;  
-}  
+#valHeading {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #d61c4e;
+  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  background: rgba(146, 212, 162, 0.35);
+  padding: 10px 20px;
+  border-radius: 12px;
+  z-index: 3000;
+}
   
 /* Heart style */  
 .heart {  
