@@ -250,7 +250,7 @@ button:hover {
     opacity: 1;  
   }  
   100% {  
-    transform: translateY(-250vh) rotate(0deg);  
+    transform: translateY(-450vh) rotate(0deg);  
     opacity: 0;  
   }  
 }  
@@ -272,7 +272,7 @@ button:hover {
     function openEnv() {  
         document.getElementById("env").classList.add("open");  
         document.getElementById("valHeading").style.display = "block";  
-        createHearts(30);  
+        createHearts(80);  
     }  
   
     function closeEnv() {  
@@ -284,10 +284,10 @@ button:hover {
         for (let i = 0; i < num; i++) {  
             const heart = document.createElement("div");  
             heart.classList.add("heart");  
-            heart.innerHTML = "🎈💝🎈";   
+            heart.innerHTML = "🎈❣️🎈";   
             heart.style.left = Math.random() * 100 + "vw";  
-            heart.style.fontSize = (Math.random() * 20 + 10) + "px";  
-            heart.style.animationDuration = (Math.random() * 3 + 2) + "s";  
+            heart.style.fontSize = (Math.random() * 20 + 15) + "px";  
+            heart.style.animationDuration = (Math.random() * 8 + 7) + "s";  
             document.body.appendChild(heart);  
             setTimeout(() => heart.remove(), 5000);  
         }  
