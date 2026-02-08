@@ -24,7 +24,7 @@ body{
   position: relative;
   width: 280px;
   height: 200px;
-  margin: 10px auto 40px auto;  /* envelope moves UP closer to heading */
+  margin: 30px auto 40px auto;  /* envelope moves UP closer to heading */
   background: #f4c4c4;
   border-radius: 6px;
   z-index: 1;
@@ -145,6 +145,16 @@ button:hover {
   color: white;
 }
 
+.head {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 5px;      /* small spacing above*/
+  margin-bottom: 30px;    /* very small gap before envelope */
+  font-family: "Poppins";
+  font-style: italic;
+  color: #92155c;
+}
+
 .arrow-right {
   position: fixed;
   right: 20px;
@@ -216,11 +226,11 @@ button:hover {
 }
 </style>
 
+<h2 class="head">Letter For You💌</h2>
 
 <h1 id="valHeading">Happy Valentine’s Day ❤️</h1>
 
 <div class="envelope" id="env">
- <h2>Letter For You💌</h2>
   <div class="top"></div>
   <div class="left"></div>
   <div class="right"></div>
