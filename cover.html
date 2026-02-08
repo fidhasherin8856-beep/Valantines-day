@@ -145,8 +145,8 @@ body{
 }  
   
 @keyframes flyAway {  
-  0%   { transform: translate(-30%, -40px); opacity: 1; }  
-  100% { transform: translate(-30%, -140px); opacity: 0; }  
+  0%   { transform: translate(-80%, -40px); opacity: 1; }  
+  100% { transform: translate(-80%, -140px); opacity: 0; }  
 }  
   
 /* Buttons */  
@@ -288,7 +288,7 @@ button:hover {
             heart.innerHTML = "🎈❣️🎈";   
             heart.style.left = Math.random() * 100 + "vw";  
             heart.style.fontSize = (Math.random() * 20 + 10) + "px";  
-            heart.style.animationDuration = (Math.random() * 4 + 3) + "s";  
+            heart.style.animationDuration = (Math.random() * 5 + 6) + "s";  
             document.body.appendChild(heart);  
             setTimeout(() => heart.remove(), 5000);  
         }  
