@@ -86,28 +86,21 @@ body{
 
 /* Letter */
 .letter {
- position: absolute;
-  width:100%;
-  height:100%;
-  top: 100px;
-  left: 1.5px;
-  bottom: 100px;
+  position: absolute;
+  width: 100%;
+  height: 200px;   /* same as envelope height */
+  top: 0;
+  left: 0;
+  background: white;
   border-radius: 4px;
-  padding: 60px;
-  padding-bottom: 10px;
-  box-sizing: border-box;
-  font-size: 18px;
-  transform: translateY(100%);
   transition: 0.7s ease;
-  z-index: 2;
-  color:rgb(104, 44, 118);
-  border-radius: 50px;
-  box-shadow: #151111;
+  z-index: 1;
+  overflow: ;   /* IMPORTANT */
 }
-.letter img{
+.letter img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;   /* keeps full image INSIDE */
   display: block;
 }
 
@@ -243,6 +236,14 @@ button:hover {
 .head {
     margin: 0;
     padding-bottom: 10px;
+}
+
+.envelope.open {
+    overflow: visible;
+}
+
+.open .letter {
+    transform: translateY(-220px); /* Adjust height as needed */
 }
 </style>
 
