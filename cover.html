@@ -24,7 +24,7 @@ body{
   position: relative;
   width: 280px;
   height: 200px; /* Adjusted height to fit standard image aspect ratio */
-  margin: 150px auto 40px auto; /* Reduced top margin to bring it into view */
+  margin: 230px auto 40px auto; /* Reduced top margin to bring it into view */
   background: #f4c4c4;
   border-radius: 6px;
   z-index: 1;
@@ -188,15 +188,15 @@ button:hover {
 
 #valHeading {
   display: none;
-  position: fixed;
-  top: 30px;
+  position: absolute;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   color: #d61c4e;
   font-size: 30px;
   font-style: italic;
   font-family: 'Poppins', sans-serif;
-  z-index: 1000;
+  z-index: 10; /* Lower z index so it stays behind letter */
   text-align: center;
   background: rgba(146, 212, 162, 0.8);
   padding: 10px 20px;
