@@ -439,20 +439,23 @@ button:hover {
   z-index: 999;
 }
 #valHeading {
-  display: none;
-  position: fixed; /* stays at top */
-  top: 2px;       /* distance from top */
+  position: fixed;
+  top: 2px;
   left: 50%;
   transform: translateX(-50%);
   color: #d61c4e;
   font-size: 36px;
   font-style: italic;
   font-family: 'Poppins', sans-serif;
-  z-index: 999;    /* above other content */
+  z-index: 999;
   text-align: center;
-  background: rgba(146, 212, 162, 0.3); /* optional glow effect */
+  background: rgba(146, 212, 162, 0.3);
   padding: 10px 20px;
   border-radius: 12px;
+
+  opacity: 0;         /* instead of display:none */
+  transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
 /* Heart style */
@@ -585,20 +588,13 @@ button:hover {
 <script>
     function openEnv() {
         document.getElementById("env").classList.add("open");
-
-        // Change heading visibility safely (mobile-friendly)
-        const heading = document.getElementById("valHeading");
-        heading.style.opacity = "1";
-
+        document.getElementById("valHeading").style.opacity = "1"; // show properly
         createHearts(30);
     }
 
     function closeEnv() {
         document.getElementById("env").classList.remove("open");
-
-        // Hide heading smoothly
-        const heading = document.getElementById("valHeading");
-        heading.style.opacity = "0";
+        document.getElementById("valHeading").style.opacity = "0"; // hide properly
     }
 
     function createHearts(num) {
@@ -614,7 +610,6 @@ button:hover {
         }
     }
 </script>
-
 
 </body>
 </html>
