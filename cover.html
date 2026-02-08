@@ -87,8 +87,8 @@ body{
 /* Letter */
 .letter {
   position: absolute;
-  width: 100%;      /* full width */
-  height: 100%;     /* auto height */
+  width: 100%;
+  height: auto;
   top: 0;
   left: 0;
   background: white;
@@ -99,10 +99,12 @@ body{
 
 .letter img {
   width: 100%;
-  height: 100%;     /* keep original aspect ratio */
-  object-fit: cover;  /* FULL image visible */
+  height: auto;
+  object-fit: contain; /* show full image */
   display: block;
 }
+
+
 /* When envelope is open */
 .open .top {
   transform: rotateX(180deg);
@@ -147,8 +149,7 @@ button:hover {
 .head {
   text-align: center;
   font-size: 22px;
-  margin-top: 260px;   /* Moves heading DOWN to envelope */
-  margin-bottom: 5px;  /* Small gap above envelope */
+  margin: 180px 0 10px 0;   /* pulls heading DOWN */
   font-family: "Poppins";
   font-style: italic;
   color: #ff80d5;
