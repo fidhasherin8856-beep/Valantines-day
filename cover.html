@@ -95,7 +95,7 @@ body{
   border-radius: 4px;
   transition: 0.7s ease;
   z-index: 1;
-  overflow: visible ;  /* IMPORTANT */
+  overflow: hidden;  /* IMPORTANT */
 }
 .letter img {
   width: 100%;
@@ -267,7 +267,7 @@ button:hover {
 function openEnv() {
     document.getElementById("env").classList.add("open");
     document.getElementById("valHeading").style.display = "block";
-    createHearts(80);
+    createHearts(50);
 }
 
 function closeEnv() {
@@ -284,7 +284,7 @@ function createHearts(num) {
         heart.style.fontSize = (Math.random() * 20 + 10) + "px";
         heart.style.animationDuration = (Math.random() * 7 + 4) + "s";
         document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 1000);
+        setTimeout(() => heart.remove(), 5000);
     }
 }
 </script>
