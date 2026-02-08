@@ -27,11 +27,12 @@ body{
   margin: 280px auto 40px auto;  
   background: #f4c4c4;
   border-radius: 6px;
-overflow:visible;
+  overflow:visible;
   z-index: 1;
 }
 .env-container {
-  margin-top: 140px;
+  margin-top: 200px;
+  position:relative;
 }
 
 /* Top triangle */
@@ -115,8 +116,8 @@ overflow:visible;
 }
 
 .open .letter {
-  transform: translateY(-140px); /* Lifts the letter out */
-  z-index: 4; /* Brings letter to front */
+    transform: translateY(-130px); /* slightly less for stability */
+    position: relative;
 }
 
 /* Hearts container */
