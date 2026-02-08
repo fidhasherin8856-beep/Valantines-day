@@ -145,8 +145,8 @@ body{
 }  
   
 @keyframes flyAway {  
-  0%   { transform: translate(-50%, -40px); opacity: 1; }  
-  100% { transform: translate(-50%, -140px); opacity: 0; }  
+  0%   { transform: translate(-30%, -40px); opacity: 1; }  
+  100% { transform: translate(-30%, -140px); opacity: 0; }  
 }  
   
 /* Buttons */  
@@ -254,7 +254,8 @@ button:hover {
     opacity: 0;  
   }  
 }  
-</style>  <h2 class="head">Letter For You ❤️</h2>  <h1 id="valHeading" style="display:none; text-align:center; color:#d61c4e; font-size:36px; font-family:'Poppins', sans-serif; margin-top:50px;">  
+</style>  <h2 class="head">Letter For You💌 
+</h2>  <h1 id="valHeading" style="display:none; text-align:center; color:#d61c4e; font-size:36px; font-family:'Poppins', sans-serif; margin-top:50px;">  
   Happy Valantines Day ❤️  
 </h1>  
 <div class="envelope" id="env">  
@@ -272,7 +273,7 @@ button:hover {
     function openEnv() {  
         document.getElementById("env").classList.add("open");  
         document.getElementById("valHeading").style.display = "block";  
-        createHearts(30);  
+        createHearts(50);  
     }  
   
     function closeEnv() {  
@@ -284,10 +285,10 @@ button:hover {
         for (let i = 0; i < num; i++) {  
             const heart = document.createElement("div");  
             heart.classList.add("heart");  
-            heart.innerHTML = "🎈💝🎈";   
+            heart.innerHTML = "🎈❣️🎈";   
             heart.style.left = Math.random() * 100 + "vw";  
             heart.style.fontSize = (Math.random() * 20 + 10) + "px";  
-            heart.style.animationDuration = (Math.random() * 3 + 2) + "s";  
+            heart.style.animationDuration = (Math.random() * 4 + 3) + "s";  
             document.body.appendChild(heart);  
             setTimeout(() => heart.remove(), 5000);  
         }  
