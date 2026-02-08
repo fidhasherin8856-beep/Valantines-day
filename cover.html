@@ -87,23 +87,22 @@ body{
 /* Letter */
 .letter {
   position: absolute;
-  width: 90%;
-  height: 90%;
-  top: 5%;
-  left: 5%;
+  width: 100%;      /* full width */
+  height: auto;     /* auto height */
+  top: 0;
+  left: 0;
   background: white;
   border-radius: 4px;
   transition: 0.7s ease;
   z-index: 1;
 }
 
-.letter img{
+.letter img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;     /* keep original aspect ratio */
+  object-fit: contain;  /* FULL image visible */
   display: block;
 }
-
 /* When envelope is open */
 .open .top {
   transform: rotateX(180deg);
@@ -148,10 +147,11 @@ button:hover {
 .head {
   text-align: center;
   font-size: 22px;
+  margin-top: 260px;   /* Moves heading DOWN to envelope */
+  margin-bottom: 5px;  /* Small gap above envelope */
   font-family: "Poppins";
   font-style: italic;
-  color: #92155c;
-  padding-bottom:"50px"
+  color: #ff80d5;
 }
 
 .arrow-right {
