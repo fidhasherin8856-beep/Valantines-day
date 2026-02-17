@@ -64,6 +64,8 @@
       background: #9a2950;
       color: #d788b3;
       position:absolute;
+      left:50px;
+      top:300px;
     
     }
 
@@ -87,15 +89,17 @@
   }
 
   function moveButton() {
-    const btn = document.getElementById("noBtn");
+  const btn = document.getElementById("noBtn");
 
-    // random movement inside screen
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 100);
+  const maxX = window.innerWidth - btn.offsetWidth - 10;
+  const maxY = window.innerHeight - btn.offsetHeight - 10;
 
-    btn.style.left = x + "px";
-    btn.style.top = y + "px";
-  }
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
+
+  btn.style.left = x + "px";
+  btn.style.top = y + "px";
+}
 </script>
 
 </body>
