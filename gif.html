@@ -79,23 +79,26 @@
 <h2 class="question">  Do you love me? ❤️ </h2>
 
 <button class="btn yes" onclick="goNext()">Yes</button>
-<button class="btn no" id="noBtn" onmouseover="moveButton()">No</button>
+<button class="btn no" id="noBtn" onclick="moveButton()" ontouchstart="moveButton()">No</button>
+
 
 <script>
-  function goNext() {
-    window.location.href = "final.html";  // change to your next page
-  }
+function goNext() {
+  window.location.href = "final.html";
+}
 
-  function moveButton() {
-    const btn = document.getElementById("noBtn");
+function moveButton() {
+  const btn = document.getElementById("noBtn");
 
-    // random movement inside screen
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 100);
+  const maxX = window.innerWidth - btn.offsetWidth;
+  const maxY = window.innerHeight - btn.offsetHeight;
 
-    btn.style.left = x + "px";
-    btn.style.top = y + "px";
-  }
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
+
+  btn.style.left = x + "px";
+  btn.style.top = y + "px";
+}
 </script>
 
 </body>
