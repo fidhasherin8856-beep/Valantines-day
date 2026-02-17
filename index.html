@@ -2,105 +2,111 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valentine Login</title>
+<title>Email Preview</title>
 
 <style>
-    body{
+    body {
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
         margin: 0;
         padding: 0;
-        font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #ffb3d9, #e680ff);
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #4a0033;
-      background: linear-gradient(rgba(0, 0,0, 0.05),rgba(0,0,0,0.05)),
-      url(image.jpg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
- 
     }
 
-    .login-box{
-        background: rgba(255, 255, 255, 0.8);
-        width: 300px;
-        padding: 25px;
-        border-radius: 20px;
-        box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
-        text-align: center;
-        backdrop-filter: blur(8px);
+    .container {
+        width: 95%;
+        max-width: 550px;
+        background: white;
+        padding: 20px;
+        margin: 30px auto;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    h2{
-        margin-bottom: 10px;
+    .subject {
         font-size: 24px;
-        color: #99004d;
+        font-weight: bold;
+        margin-bottom: 15px;
     }
 
-    p{
-        font-size: 14px;
+    .sender {
+        display: flex;
+        align-items: center;
         margin-bottom: 20px;
     }
 
-    .input-field{
-        width: 100%;
-        padding: 10px;
-        margin: 8px 0;
-        border-radius: 10px;
-        border: 1px solid #cc66a0;
-        outline: none;
+    .sender img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin-right: 12px;
+    }
+
+    .sender-info {
         font-size: 14px;
-        background: #ffe6f2;
     }
 
-    .login-btn{
-        width: 100%;
-        padding: 12px;
-        background: #ff3399;
-        border: none;
-        color: white;
-        border-radius: 12px;
+    .sender-info .name {
+        font-weight: bold;
+    }
+
+    .email-body {
         font-size: 16px;
-        margin-top: 10px;
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+
+    a {
+        color: #1a73e8;
+        text-decoration: none;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn {
+        background: #f1f3f4;
+        padding: 10px 18px;
+        border-radius: 20px;
         cursor: pointer;
-        transition: 0.3s;
+        border: none;
+        font-size: 14px;
     }
 
-    .login-btn:hover{
-        background: #e60073;
-        transform: scale(1.03);
+    .btn:hover {
+        background: #e5e7e9;
     }
-
 </style>
 
 </head>
 <body>
 
-<div class="login-box">
-    <h2>💖 Valentine Login 💖</h2>
-    <p>Enter your names to unlock your special surprise ✨</p>
+<div class="container">
 
-    <input type="text" id="opener" class="input-field" placeholder="Your Name">
-    <input type="text" id="lover" class="input-field" placeholder="Lover's Name">
+    <div class="subject">Important Test</div>
 
-    <button class="login-btn" onclick="goNext()">Login ❤️</button>
+    <div class="sender">
+        <img src="profile.jpg" alt="Profile">
+        <div class="sender-info">
+            <div class="name">saleel zakkariya</div>
+            <div>saleelzakkariya@gmail.com → devbies.store@gmail.com</div>
+        </div>
+    </div>
+
+    <div class="email-body">
+        Hey Love,<br><br>
+        Turn the volume up, I’ve got something special for you 💕<br>
+        Take this test <a href="#">Scam Link</a>
+    </div>
+
+    <div class="buttons">
+        <button class="btn">↩ Reply</button>
+        <button class="btn">➡ Forward</button>
+        <button class="btn">😊</button>
+    </div>
+
 </div>
-
-<script>
-function goNext() {
-    let opener = document.getElementById("opener").value.trim();
-    let lover = document.getElementById("lover").value.trim();
-
-    if (opener === "" || lover === "") {
-        alert("Please fill in both names before continuing ❤️");
-        return;
-    }
-
-    window.location.href = "gif.html";
-}
-</script>
 
 </body>
 </html>
