@@ -1,115 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Email Preview</title>
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Email Preview</title>  <style>  
+    body {  
+        font-family: Arial, sans-serif;  
+        background: white;   
+        margin: 0;  
+        padding: 0;  
+    }  
+  
+    .subject {  
+        font-size: 24px;  
+        font-weight: bold;  
+        font-style: italic;  
+        margin-bottom: 15px;  
+    }  
+  
+    .sender {  
+        display: flex;  
+        align-items: center;  
+        margin-bottom: 20px;  
+    }  
+  
+    .sender img {  
+        width: 45px;  
+        height: 45px;  
+        border-radius: 50%;  
+        margin-right: 12px;  
+    }  
+  
+    .sender-info {  
+        font-size: 14px;  
+    }  
+  
+    .sender-info .name {  
+        font-weight: bold;  
+    }  
+  
+    .email-body {  
+        font-size: 16px;  
+        margin-bottom: 25px;  
+        line-height: 1.5;  
+    }  
+  
+    /* ADD SPACE ABOVE CLICK HERE */  
+    .email-body a {  
+        margin-top: 19px;  
+        display: inline-block;  
+    }  
+  
+    a {  
+        color: #1a73e8;  
+        text-decoration: none;  
+    }  
+  
+    .buttons {  
+        display: flex;  
+        gap: 15px;  
+    }  
+  
+    .btn {  
+        background: #f1f3f4;  
+        padding: 10px 18px;  
+        border-radius: 20px;  
+        cursor: pointer;  
+        border: none;  
+        font-size: 14px;  
+        margin-top:25px;  
+    }  
+  
+    .btn:hover {  
+        background: #e5e7e9;  
+    }  
+  
+.name-line {  
+    font-size: 16px;  
+    color: #444;  
+}  
+  
+.name {  
+    font-weight: bold;  
+    margin-right: 5px;  
+}  
+  
+.email {  
+    color: #6b6b6b;  
+}  
+  
+.to-me {  
+    font-size: 14px;  
+    color: #6b6b6b;  
+    margin-top: 2px;  
+}  
+</style>  </head>  
+<body>  <div class="container">  <div class="subject">Important Test</div>  
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: white; 
-        margin: 0;
-        padding: 0;
-    }
+<div class="sender">  
+    <img src="image.jpg" alt="Profile">  
+    <div class="sender-info">  
+<div class="name-line">  
+    <span class="name">fidha sherin</span>  
+    <span class="email">&lt;fidhasherin@gmail.com&gt;</span>  
+</div>  
+<div class="to-me">to suhaibk@gmail.com ▼</div>
 
-    .container {
-        max-width: 500px;     /* FIXED Gmail-like width */
-        margin: 0 auto;       /* center */
-        padding: 20px;
-    }
+</div>  <div class="email-body">  
+    Hey Love❤️,<br><br>  
+    I want to ask something to you, So,I made this just for you 😉<br>  
+     <a href="#"><u>Click here</u>🫶</a>  
+</div>  
 
-    .subject {
-        font-size: 24px;
-        font-weight: bold;
-        font-style: italic;
-        margin-bottom: 15px;
-    }
+<div class="buttons">  
+    <button class="btn">↩ Reply</button>  
+    <button class="btn">➡ Forward</button>  
+    <button class="btn">😊</button>  
+</div>
 
-    .sender {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .sender img {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        margin-right: 12px;
-    }
-
-    .sender-info {
-        font-size: 14px;
-    }
-
-    .name-line {
-        font-size: 16px;
-        color: #444;
-    }
-
-    .name {
-        font-weight: bold;
-        margin-right: 5px;
-    }
-
-    .email {
-        color: #6b6b6b;
-    }
-
-    .to-me {
-        font-size: 14px;
-        color: #6b6b6b;
-        margin-top: 2px;
-    }
-
-    .email-body {
-        font-size: 16px;
-        margin-bottom: 25px;
-        line-height: 1.5;
-    }
-
-    .email-body a {
-        margin-top: 19px;
-        display: inline-block;
-    }
-
-    a {
-        color: #1a73e8;
-        text-decoration: none;
-    }
-
-    .buttons {
-        display: flex;
-        gap: 15px;
-    }
-
-    .btn {
-        background: #f1f3f4;
-        padding: 10px 18px;
-        border-radius: 20px;
-        cursor: pointer;
-        border: none;
-        font-size: 14px;
-        margin-top: 25px;
-    }
-
-    .btn:hover {
-        background: #e5e7e9;
-    }
-</style>
-
-</head>
-<body>
-
-<div class="container">
-
-    <div class="subject">Important Test</div>
-
-    <div class="sender">
-        <img src="image.jpg" alt="Profile">
-        <div class="sender-info">
-            <div class="name-line">
-                <span class="name">fidha sherin</span>
-                <span class="email">&lt;fidhasherin@gmail.com&gt;</span>
-            </div>
-            <div class="to-me">to suhaibk
+</div>  </body>  
+</html>  
