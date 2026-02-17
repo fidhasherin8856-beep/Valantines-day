@@ -12,6 +12,12 @@
         padding: 0;
     }
 
+    .container {
+        max-width: 500px;     /* FIXED Gmail-like width */
+        margin: 0 auto;       /* center */
+        padding: 20px;
+    }
+
     .subject {
         font-size: 24px;
         font-weight: bold;
@@ -36,8 +42,24 @@
         font-size: 14px;
     }
 
-    .sender-info .name {
+    .name-line {
+        font-size: 16px;
+        color: #444;
+    }
+
+    .name {
         font-weight: bold;
+        margin-right: 5px;
+    }
+
+    .email {
+        color: #6b6b6b;
+    }
+
+    .to-me {
+        font-size: 14px;
+        color: #6b6b6b;
+        margin-top: 2px;
     }
 
     .email-body {
@@ -46,7 +68,6 @@
         line-height: 1.5;
     }
 
-    /* ADD SPACE ABOVE CLICK HERE */
     .email-body a {
         margin-top: 19px;
         display: inline-block;
@@ -69,32 +90,12 @@
         cursor: pointer;
         border: none;
         font-size: 14px;
-        margin-top:25px;
+        margin-top: 25px;
     }
 
     .btn:hover {
         background: #e5e7e9;
     }
-
-.name-line {
-    font-size: 16px;
-    color: #444;
-}
-
-.name {
-    font-weight: bold;
-    margin-right: 5px;
-}
-
-.email {
-    color: #6b6b6b;
-}
-
-.to-me {
-    font-size: 14px;
-    color: #6b6b6b;
-    margin-top: 2px;
-}
 </style>
 
 </head>
@@ -107,26 +108,8 @@
     <div class="sender">
         <img src="image.jpg" alt="Profile">
         <div class="sender-info">
-    <div class="name-line">
-        <span class="name">fidha sherin</span>
-        <span class="email">&lt;fidhasherin@gmail.com&gt;</span>
-    </div>
-    <div class="to-me">to suhaibk@gmail.com ▼</div>
-</div>
-
-    <div class="email-body">
-        Hey Love❤️,<br><br>
-        I want to ask something to you, So,I made this just for you 😉<br>
-         <a href="#"><u>Click here</u>🫶</a>
-    </div>
-
-    <div class="buttons">
-        <button class="btn">↩ Reply</button>
-        <button class="btn">➡ Forward</button>
-        <button class="btn">😊</button>
-    </div>
-
-</div>
-
-</body>
-</html>
+            <div class="name-line">
+                <span class="name">fidha sherin</span>
+                <span class="email">&lt;fidhasherin@gmail.com&gt;</span>
+            </div>
+            <div class="to-me">to suhaibk
